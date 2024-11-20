@@ -1,0 +1,108 @@
+/* Favorites container styles */
+.favorite-section {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the left */
+    background-color: rgba(0, 255, 255, 0.527); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    height: 50%;
+    
+  }
+  
+  /* Title styling */
+  .favorite-section .MuiTypography-h5 {
+    font-weight: 1000;
+    text-align: left; /* Ensure the title is aligned left */
+    color: #ffffff; /* Primary color */
+    margin-bottom: 20px;
+  }
+  
+  /* Grid container for coins */
+  .coin-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of cards */
+    justify-content: center; /* Centers the grid items */
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px;
+  }
+  
+  /* Coin card styling */
+  .coin-card {
+    width: 120%;
+    max-width: 400px; /* Limit max width of coin cards */
+    height: auto;
+    background-color: #1d1c1d;
+    border-radius: 15px; /* More rounded corners */
+    padding: 10px; /* Larger padding for bigger details */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    justify-content: center; /* Ensures content is centered */
+  }
+  
+  /* Hover effect for coin cards */
+  .coin-card:hover {
+    transform: scale(1.1); /* Slightly more noticeable hover effect */
+  }
+  
+  /* Coin icon styling */
+  .coin-icon {
+    width: 300px; /* Much bigger coin image size */
+    height: 300px; /* Much bigger coin image size */
+    margin-bottom: 10px; /* More space between icon and text */
+    object-fit: contain; /* Ensure the image doesn't get distorted */
+  }
+  
+  /* Coin info styling */
+  .coin-info {
+    width: 100%;
+  }
+  
+  /* Coin name styling */
+  .coin-info .MuiTypography-h6 {
+    font-weight: 700; /* Increased font weight */
+    font-size: 32px; /* Much larger font size */
+    margin-bottom: 20px; /* Increased space between name and price */
+    color: #ffffff; /* White color for better contrast */
+    text-transform: uppercase; /* Make coin names stand out */
+  }
+  
+  /* Coin price styling */
+  .coin-info .coin-price {
+    font-size: 28px; /* Increased font size */
+    font-weight: 800; /* Bold for emphasis */
+    color: #ffcc00; /* Golden color for price */
+    margin-bottom: 15px; /* Increased space between price and change */
+  }
+  
+  /* Styling for positive and negative price change */
+  .coin-info .green {
+    color: #0ae911; /* Vibrant green for positive price change */
+    font-size: 24px; /* Larger font size for price changes */
+    font-weight: 600; /* Bold for emphasis */
+  }
+  
+  .coin-info .red {
+    color: #e91708; /* Vibrant red for negative price change */
+    font-size: 24px; /* Larger font size for price changes */
+    font-weight: 600; /* Bold for emphasis */
+  }
+  
+  /* No favorites message */
+  .coin-grid .MuiTypography-body2 {
+    text-align: center;
+    font-size: 22px; /* Bigger font for no favorites message */
+    color: #757575; /* Text color for the no favorites message */
+    margin-top: 30px;
+  }
+  

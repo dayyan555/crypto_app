@@ -1,0 +1,28 @@
+# React build folder
+/build
+
+# Node modules
+/node_modules
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# dotenv environment variables file
+.env
+
+# Next.js build folder (if using Next.js)
+.next
+
+# VSCode settings folder
+.vscode/
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# IDE settings (optional)
+.idea/

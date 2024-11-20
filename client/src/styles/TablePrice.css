@@ -1,0 +1,128 @@
+/* Dark Theme Styles */
+.table-price-section {
+  background-color: #1a1a1a;  /* Dark background */
+  color: white;  /* Light text */
+  padding: 40px 60px;  /* Increased padding for more space around the table */
+  margin-top: 10px;  /* Pushed down to avoid overlap with header */
+}
+
+.table-price-content {
+  max-width: 1200px;
+  margin:  auto;
+   /* Pushed down to avoid overlap with header */
+  margin-bottom: 80px;
+}
+
+.table-price-content__coin-list {
+  margin-top: 50px;
+}
+
+.table-price-content__coin-list__top {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: white;  /* Light color for headers */
+  font-size: 24px;  /* Adjusted font size for header */
+  padding: 15px 10px;  /* Added padding to make columns wider */
+  background: linear-gradient(90deg, rgba(255, 99, 71, 1) 0%, rgba(255, 165, 0, 1) 100%); /* Colorful gradient */
+  border-radius: 10px;  /* Rounded corners for header */
+}
+
+.coin-header {
+  flex: 3;  /* Increased space for coin name */
+  text-align: center;  /* Left-align for coin name column */
+}
+
+.coin-header__price {
+  flex: 2;  /* Adjusted space for price */
+  text-align: center;  /* Center-align for price column */
+}
+
+.coin-header__change {
+  flex: 3;  /* Adjusted space for 24h change */
+  text-align: center;  /* Right-align for 24h change column */
+}
+
+.table-price-content__coin-list__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;  /* Increased padding for each row */
+  border-bottom: 1px solid #444;  /* Darker border for separation */
+  text-decoration: none;
+  color: white;  /* Coin row text is white */
+  font-size: 28px;  /* Increased font size for content */
+}
+
+.coin-row:hover {
+  background-color: #333;  /* Slight darkening on hover */
+}
+
+.coin-row__name {
+  display: flex;
+  align-items: center;
+  flex: 2;  /* Increased space for coin name */
+  justify-content: flex-start;  /* Left-align the coin name */
+}
+
+.coin-row__image {
+  width: 70px;  /* Larger coin image */
+  height: 70px;
+  margin-right: 70px;  /* Increased spacing between image and text */
+}
+
+.coin-row__price {
+  margin: 0;
+  font-size: 28px;  /* Increased font size for price */
+  flex: 2;  /* Adjusted space for price */
+  text-align: center;  /* Center-align price */
+}
+
+.coin-row__change {
+  margin: 0;
+  font-size: 28px;  /* Increased font size for change */
+  flex: 2;  /* Adjusted space for change */
+  text-align: center;  /* Right-align 24h change */
+}
+
+.green-text {
+  color: green;
+}
+
+.red-text {
+  color: red;
+}
+
+.loader {
+  text-align: center;
+  padding: 40px;
+  font-size: 20px;  /* Larger loader text */
+}
+
+
+.favorite-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.2s ease-in-out;
+  
+}
+.favorite-btn.favorited {
+  color: red;
+}
+
+.favorite-btn:hover {
+  color: gold;
+}
+
+.loader {
+  text-align: center;
+  padding: 40px;
+  font-size: 20px;
+}

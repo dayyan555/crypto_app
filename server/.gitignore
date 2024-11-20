@@ -1,0 +1,29 @@
+# Node modules
+/node_modules
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# dotenv environment variables file
+.env
+
+# npm and yarn lock files (if you don't want them tracked by Git)
+package-lock.json
+yarn.lock
+
+# IDE settings (optional)
+.idea/
+.vscode/
+
+# OS system files
+.DS_Store
+Thumbs.db
+
+# Server build or compiled files (if any)
+dist/
+build/
+
+# Temporary files
+*.log
