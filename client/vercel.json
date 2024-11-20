@@ -16,7 +16,7 @@
       }
     ],
     "env": {
-      "REACT_APP_API_URL": "http://localhost:5000/api/favorite"
+      "REACT_APP_API_URL": "https://crypto-app-six-tau.vercel.app/api/favorite"
     }
   }
   
