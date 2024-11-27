@@ -79,7 +79,7 @@
   
   /* Coin price styling */
   .coin-info .coin-price {
-    font-size: 28px; /* Increased font size */
+    font-size: 30px; /* Increased font size */
     font-weight: 800; /* Bold for emphasis */
     color: #ffcc00; /* Golden color for price */
     margin-bottom: 15px; /* Increased space between price and change */
@@ -106,3 +106,15 @@
     margin-top: 30px;
   }
   
+  /* Styling for positive and negative price change */
+.coin-info .positive {
+  color: #0ae911; /* Vibrant green for positive price change */
+  font-size: 30px; /* Larger font size for price changes */
+  font-weight: 800; /* Bold for emphasis */
+}
+
+.coin-info .negative {
+  color: #e91708; /* Vibrant red for negative price change */
+  font-size: 30px; /* Larger font size for price changes */
+  font-weight: 800; /* Bold for emphasis */
+}
