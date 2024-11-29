@@ -9,7 +9,7 @@ const Favorites = ({ favorites, onSelectFavorite, coins }) => {
   useEffect(() => {
     // Filter the coins data to include only the ones in the favorites list
     const filteredCoinsData = coins.filter((coin) =>
-      favorites.includes(coin.id)  // Make sure `favorites` is an array of coin IDs
+      favorites.includes(coin.id)  
     );
     setCoinsData(filteredCoinsData);
   }, [coins, favorites]);
