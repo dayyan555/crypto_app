@@ -1,22 +1,62 @@
-
-import React from "react";
-import { Box, Typography, Button } from "@mui/material";
-import "../styles/TablePrice.css"; // Ensure the path is correct
+import React, { useState } from "react";
+import { Box, Typography } from "@mui/material";
+import "../styles/TablePrice.css"; 
 
 const PriceTable = ({ coins, toggleFavorite, favorites }) => {
+  const [sortBy, setSortBy] = useState("price"); 
+  const [sortOrder, setSortOrder] = useState("asc"); 
 
   const handleToggleFavorite = (coinId) => {
     console.log(`Toggling favorite for coin with ID: ${coinId}`);
     toggleFavorite(coinId);
   };
 
+  // Function to handle sorting
+  const sortCoins = (coins) => {
+    return coins.sort((a, b) => {
+      if (sortBy === "price") {
+        // Sort by price
+        return sortOrder === "asc"
+          ? a.current_price - b.current_price
+          : b.current_price - a.current_price;
+      } else if (sortBy === "name") {
+        // Sort by name
+        return sortOrder === "asc"
+          ? a.name.localeCompare(b.name)
+          : b.name.localeCompare(a.name);
+      }
+      return 0;
+    });
+  };
+
+  // Sorted coins
+  const sortedCoins = sortCoins(coins);
+
   return (
     <section id="table-price" className="table-price-section">
       <div className="container">
         <div className="table-price-content">
-          <Typography variant="h5" color="primary" gutterBottom>
+          <Typography variant="h3" color="while"  gutterBottom sx={{
+    fontWeight: 'bold',  // Make text bold
+    textAlign: 'left'   // Align text to the left
+  }}
+>
             Coin Price
           </Typography>
+
+          {/* Sorting controls */}
+          <div className="sorting-controls">
+            <button onClick={() => setSortBy("price")}>Sort by Price</button>
+            <button onClick={() => setSortBy("name")}>Sort by Name</button>
+            <button
+              onClick={() =>
+                setSortOrder(sortOrder === "asc" ? "desc" : "asc")
+              }
+            >
+              {sortOrder === "asc" ? "Ascending" : "Descending"}
+            </button>
+          </div>
+
           <div className="table-price-content__coin-list">
             {/* Table Header */}
             <div className="table-price-content__coin-list__top">
@@ -26,13 +66,10 @@ const PriceTable = ({ coins, toggleFavorite, favorites }) => {
             </div>
             {/* Coin Rows */}
             <div className="table-price-content__coin-list__row">
-              {coins.length > 0 ? (
-                coins.map((coin) => {
-                  
-                  
+              {sortedCoins.length > 0 ? (
+                sortedCoins.map((coin) => {
                   // Check if the coin's ID is in the favorites list
                   const isFavorite = favorites.includes(coin.id);
-            
 
                   return (
                     <div className="coin-row" key={coin.id}>

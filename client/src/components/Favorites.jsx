@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
-import "../styles/Favorites.css"; // Import CSS file for Favorites component
+import "../styles/Favorites.css"; 
 
 const Favorites = ({ favorites, onSelectFavorite, coins }) => {
   const [coinsData, setCoinsData] = useState([]);
